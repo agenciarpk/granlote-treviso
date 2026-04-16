@@ -10,7 +10,7 @@ export function V3Masterplan() {
   const [active, setActive] = useState<Hotspot | null>(null);
 
   return (
-    <section id="v3-masterplan" className="bg-sage py-28 md:py-40">
+    <section id="v3-implantacao" className="bg-sage py-28 md:py-40">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10">
         <Reveal>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">

@@ -5,6 +5,47 @@ export function V3Footer() {
   return (
     <footer className="bg-earth-deep text-off-white/70">
       <div className="mx-auto max-w-[1600px] px-6 py-20 md:px-10 md:py-24">
+
+        {/* Assinaturas das empresas */}
+        <div className="mb-16 grid grid-cols-1 gap-10 border-b border-off-white/10 pb-16 sm:grid-cols-3 sm:items-center sm:gap-0">
+          {/* Gestão de vendas — Benedo */}
+          <div className="sm:border-r sm:border-off-white/10 sm:pr-12">
+            <p className="text-[9px] uppercase tracking-[0.22em] text-off-white/40">Gestão de vendas</p>
+            <Image
+              src="/logo/benedo.svg"
+              alt="Benedo"
+              width={160}
+              height={60}
+              className="mt-3 h-10 w-auto brightness-0 invert opacity-80"
+            />
+            <p className="mt-2 text-[10px] uppercase tracking-[0.1em] text-off-white/35">{legal.creci}</p>
+          </div>
+
+          {/* Castelfranco — centro */}
+          <div className="flex flex-col items-start sm:items-center sm:border-r sm:border-off-white/10 sm:px-12">
+            <Image
+              src="/logo/castelfranco.svg"
+              alt="Castelfranco"
+              width={180}
+              height={90}
+              className="h-12 w-auto brightness-0 invert opacity-80"
+            />
+            <p className="mt-2 text-[11px] font-light text-off-white/50 sm:text-center">Empreendimentos imobiliários</p>
+          </div>
+
+          {/* Realização — Granlote */}
+          <div className="sm:pl-12">
+            <p className="text-[9px] uppercase tracking-[0.22em] text-off-white/40">Realização</p>
+            <Image
+              src="/logo/granlote-branco.png"
+              alt="Granlote Urbanismo"
+              width={160}
+              height={48}
+              className="mt-3 h-9 w-auto opacity-80"
+            />
+          </div>
+        </div>
+
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <Image
@@ -16,43 +57,31 @@ export function V3Footer() {
             />
             <p className="mt-8 max-w-md text-sm font-light leading-relaxed">
               Residencial fechado de alto padrão em {projeto.cidade}/{projeto.estado}.
+              525 lotes com 12m de frente, clube completo e heliponto.
             </p>
-            <Image
-              src="/logo/granlote-branco.png"
-              alt="Granlote Urbanismo"
-              width={160}
-              height={48}
-              className="mt-12 h-10 w-auto opacity-75"
-            />
           </div>
 
           <div className="md:col-span-4">
-            <h4 className="text-[10px] uppercase tracking-[0.2em] text-ocre-light">
-              Realização
-            </h4>
+            <h4 className="text-[10px] uppercase tracking-[0.2em] text-ocre-light">Sede</h4>
             <p className="mt-4 text-xs font-light leading-relaxed text-off-white/55">
-              {legal.razaoSocial}
-              <br />
-              CNPJ {legal.cnpj}
-              <br />
               {legal.sede}
-            </p>
-            <h4 className="mt-8 text-[10px] uppercase tracking-[0.2em] text-ocre-light">
-              Gestão de vendas
-            </h4>
-            <p className="mt-4 text-xs font-light text-off-white/55">
-              {legal.vendasEmpresa} — {legal.creci}
             </p>
           </div>
 
           <div className="md:col-span-3">
-            <h4 className="text-[10px] uppercase tracking-[0.2em] text-ocre-light">
-              Conformidade
-            </h4>
-            <ul className="mt-4 space-y-3 text-[11px] font-light leading-relaxed text-off-white/55">
-              <li>Registro: {legal.registro}</li>
-              <li>Alvará: {legal.alvara}</li>
-              <li>GRAPROHAB: {legal.graprohab}</li>
+            <h4 className="text-[10px] uppercase tracking-[0.2em] text-ocre-light">Navegue</h4>
+            <ul className="mt-4 space-y-3 text-[11px] font-light text-off-white/55">
+              {[
+                ["#v3-implantacao", "Implantação"],
+                ["#v3-localizacao", "Localização"],
+                ["#obras", "Obras"],
+                ["#plantao", "Plantão de vendas"],
+                ["#v3-form", "Contato"],
+              ].map(([href, label]) => (
+                <li key={href}>
+                  <a href={href} className="hover:text-off-white">{label}</a>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -2,16 +2,16 @@ import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { WhatsAppFab } from "@/components/ui/WhatsAppFab";
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { Manifesto } from "@/components/sections/Manifesto";
-import { Numeros } from "@/components/sections/Numeros";
-import { Masterplan } from "@/components/sections/Masterplan";
 import { CapitulosEditoriais } from "@/components/sections/CapitulosEditoriais";
-import { Galeria } from "@/components/sections/Galeria";
+import { Galerias } from "@/components/sections/Galerias";
+import { Numeros } from "@/components/sections/Numeros";
+import { Granlote } from "@/components/sections/Granlote";
+import { Masterplan } from "@/components/sections/Masterplan";
 import { Localizacao } from "@/components/sections/Localizacao";
 import { MapaLocalizacao } from "@/components/sections/MapaLocalizacao";
-import { Granlote } from "@/components/sections/Granlote";
+import { ObrasFotos } from "@/components/sections/ObrasFotos";
+import { PlantaoVendas } from "@/components/sections/PlantaoVendas";
 import { FormContato } from "@/components/sections/FormContato";
-import { FAQ } from "@/components/sections/FAQ";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -20,17 +20,32 @@ export default function Home() {
       <SmoothScroll />
       <Navbar />
       <main>
+        {/* 1. Produto */}
         <Hero />
-        <Manifesto />
-        <Numeros />
-        <Masterplan />
+
+        {/* 2. Lazer */}
         <CapitulosEditoriais />
-        <Galeria />
+        <Galerias />
+
+        {/* 3. Diferenciais */}
+        <Numeros />
+        <Granlote />
+
+        {/* 4. Implantação */}
+        <Masterplan />
+
+        {/* 5. Localização */}
         <Localizacao />
         <MapaLocalizacao />
-        <Granlote />
+
+        {/* 6. Evolução de obras */}
+        <ObrasFotos />
+
+        {/* 7. Fale conosco — Plantão */}
+        <PlantaoVendas />
+
+        {/* 8. Formulário */}
         <FormContato />
-        <FAQ />
       </main>
       <Footer />
       <WhatsAppFab />

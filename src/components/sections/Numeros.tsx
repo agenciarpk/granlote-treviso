@@ -77,6 +77,11 @@ export function Numeros() {
             Uma nova referência
             <span className="block italic text-off-white/80">urbana em Paulínia</span>
           </h2>
+          <p className="mt-8 max-w-lg text-base font-light leading-relaxed text-off-white/65 md:text-lg md:leading-[1.8]">
+            O Gran Reserva Treviso é um residencial fechado que traduz um novo jeito de viver —
+            terrenos a partir de 300 m² com 12 metros de frente, lazer e segurança
+            convivendo em equilíbrio.
+          </p>
         </div>
 
         <div className="mt-20 grid grid-cols-2 gap-x-6 gap-y-14 md:grid-cols-3 lg:grid-cols-6">

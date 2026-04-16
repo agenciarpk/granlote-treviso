@@ -43,20 +43,6 @@ export function Navbar() {
         )}
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 md:px-10 md:py-5">
-          {/* Logo */}
-          <a href="#top" className="flex items-center gap-3" aria-label="Gran Reserva Treviso">
-            <Image
-              src="/logo/gran-reserva-treviso.svg"
-              alt="Gran Reserva Treviso"
-              width={180}
-              height={44}
-              priority
-              className={cn(
-                "h-9 w-auto transition-all duration-500 md:h-11",
-                scrolled ? "" : "brightness-0 invert"
-              )}
-            />
-          </a>
 
           {/* Desktop nav */}
           <nav className="hidden items-center gap-10 lg:flex">
@@ -79,7 +65,6 @@ export function Navbar() {
           {/* Version switcher */}
           <div className="hidden items-center gap-2 text-[10px] uppercase tracking-[0.15em] lg:flex">
             <span className={cn("font-serif", scrolled ? "text-ocre" : "text-ocre-light")}>v1</span>
-            <a href="/v2" className={cn("transition", scrolled ? "text-earth/50 hover:text-earth" : "text-off-white/40 hover:text-off-white/80")}>v2</a>
             <a href="/v3" className={cn("transition", scrolled ? "text-earth/50 hover:text-earth" : "text-off-white/40 hover:text-off-white/80")}>v3</a>
             <span className={cn("mx-2 h-4 w-px", scrolled ? "bg-earth/15" : "bg-off-white/20")} />
           </div>
@@ -126,13 +111,6 @@ export function Navbar() {
         )}
       >
         <div className="flex items-center justify-between px-6 py-5">
-          <Image
-            src="/logo/gran-reserva-treviso.svg"
-            alt="Gran Reserva Treviso"
-            width={180}
-            height={44}
-            className="h-10 w-auto brightness-0 invert"
-          />
           <button
             type="button"
             onClick={() => setOpen(false)}

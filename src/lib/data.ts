@@ -220,7 +220,7 @@ export const capitulos: Capitulo[] = [
     chapeu: "Exclusivo",
     tagline: "Quando chegar e partir ganham outras perspectivas",
     copy: "No Gran Reserva Treviso, chegar e partir ganham outras perspectivas. Um heliponto que valoriza cada instante, oferecendo rapidez nos deslocamentos e a conveniência de viver com total autonomia.",
-    imagem: "/images/book-heliponto-1920.webp",
+    imagem: "/images/mall-1920.webp",
     destaque: true,
   },
 ];

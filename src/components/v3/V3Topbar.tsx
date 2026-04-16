@@ -26,21 +26,7 @@ export function V3Topbar() {
   return (
     <>
       <header className="fixed inset-x-0 top-0 z-40 border-b border-earth-deep/10 bg-sage/85 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-6 py-4 md:px-10">
-          <a href="#v3-top" className="flex items-center gap-4">
-            <Image
-              src="/logo/gran-reserva-treviso.svg"
-              alt="Gran Reserva Treviso"
-              width={180}
-              height={42}
-              className="h-10 w-auto"
-              priority
-            />
-            <span className="hidden h-4 w-px bg-earth-deep/20 md:block" />
-            <span className="hidden text-[10px] uppercase tracking-[0.2em] text-earth md:block">
-              Experience
-            </span>
-          </a>
+        <div className="mx-auto flex max-w-[1600px] items-center justify-end lg:justify-between px-6 py-4 md:px-10">
 
           <nav className="hidden items-center gap-8 lg:flex">
             {links.map((l) => (
@@ -57,7 +43,6 @@ export function V3Topbar() {
           <div className="flex items-center gap-4">
             <div className="hidden items-center gap-2 text-[10px] uppercase tracking-[0.15em] lg:flex">
               <a href="/" className="text-earth/50 hover:text-earth">v1</a>
-              <a href="/v2" className="text-earth/50 hover:text-earth">v2</a>
               <span className="font-serif text-ocre">v3</span>
               <span className="mx-2 h-4 w-px bg-earth/15" />
             </div>
@@ -91,13 +76,6 @@ export function V3Topbar() {
         )}
       >
         <div className="flex items-center justify-between px-6 py-4">
-          <Image
-            src="/logo/gran-reserva-treviso.svg"
-            alt=""
-            width={180}
-            height={42}
-            className="h-10 w-auto"
-          />
           <button
             type="button"
             onClick={() => setOpen(false)}

@@ -10,7 +10,7 @@ export function Masterplan() {
   const [active, setActive] = useState<Hotspot | null>(null);
 
   return (
-    <section id="masterplan" className="relative bg-off-white py-24 md:py-36">
+    <section id="implantacao" className="relative bg-off-white py-24 md:py-36">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12">
         <Reveal className="max-w-2xl">
           <p className="tagline-editorial text-ocre">o desenho do bairro</p>

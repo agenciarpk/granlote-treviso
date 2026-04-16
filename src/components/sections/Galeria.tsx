@@ -50,19 +50,18 @@ export function Galeria() {
 
         {/* Grid mosaic — 4/3/2/1 columns */}
         <Reveal delay={0.1}>
-          <div className="mt-16 grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-3 lg:grid-cols-4">
+          <div className="mt-16 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
             {galeriaCompleta.map((item, i) => {
-              // Algumas imagens ocupam 2 colunas para quebrar ritmo
-              const wide = [1, 6, 12, 18].includes(i);
+              const wide = i === 0;
               return (
                 <button
                   key={item.id}
                   type="button"
                   onClick={() => setLightbox(i)}
                   className={`group relative block overflow-hidden rounded-sm bg-sage ${
-                    wide ? "col-span-2" : ""
+                    wide ? "md:col-span-2" : ""
                   }`}
-                  style={{ aspectRatio: wide ? "16/9" : "4/5" }}
+                  style={{ aspectRatio: "16/9" }}
                 >
                   <Image
                     src={item.imagem}

@@ -67,7 +67,7 @@ export function V3HorizontalChapters() {
               width: "min(86vw, 560px)",
             }}
           >
-            <div className="relative aspect-[4/5] overflow-hidden bg-sage">
+            <div className="relative aspect-[16/9] overflow-hidden bg-sage">
               <Image
                 src={cap.imagem}
                 alt={cap.chapeu}
@@ -75,21 +75,6 @@ export function V3HorizontalChapters() {
                 sizes="(max-width:768px) 86vw, 560px"
                 className="object-cover transition-transform duration-[1.4s] ease-out hover:scale-[1.04]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-earth-deep/90 via-earth-deep/10 to-transparent" />
-              <span className="absolute left-5 top-5 font-serif text-xs text-ocre-light">
-                {String(i + 1).padStart(2, "0")} / 06
-              </span>
-              <div className="absolute inset-x-5 bottom-5">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-ocre-light">
-                  {cap.chapeu}
-                </p>
-                <h3 className="mt-3 font-display text-3xl font-light leading-tight text-off-white md:text-4xl">
-                  {cap.tagline}
-                </h3>
-                <p className="mt-4 max-w-md text-sm font-light leading-relaxed text-off-white/80">
-                  {cap.copy}
-                </p>
-              </div>
             </div>
           </article>
         ))}
