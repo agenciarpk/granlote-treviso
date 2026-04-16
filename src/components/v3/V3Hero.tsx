@@ -65,7 +65,7 @@ export function V3Hero() {
               Residencial fechado
               <span className="block">de alto padrão</span>
               <span className="block italic text-ocre" style={{ fontSize: "clamp(2.6rem, 4vw, 5.2rem)" }}>
-                com 12m de frente
+                com <span style={{ fontVariantNumeric: "lining-nums" }}>12</span>m de frente
               </span>
             </h1>
 

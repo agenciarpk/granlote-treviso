@@ -81,7 +81,7 @@ export function Hero() {
             <br />
             de alto padrão
             <br />
-            <span className="italic">com 12m de frente</span>
+            <span className="italic">com <span style={{ fontVariantNumeric: "lining-nums" }}>12</span>m de frente</span>
           </motion.h1>
 
           <motion.p
