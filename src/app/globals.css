@@ -20,10 +20,10 @@
   --color-off-white: #fafaf5;
 
   /* ---------- Tipografia ---------- */
-  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
-  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-display: var(--font-aldine), "Aldine 721 BT", Georgia, serif;
+  --font-serif: var(--font-aldine), "Aldine 721 BT", Georgia, serif;
   --font-script: var(--font-italianno), cursive;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-antenna), "Antenna", ui-sans-serif, system-ui, -apple-system, sans-serif;
 
   /* ---------- Espaçamentos editoriais ---------- */
   --spacing-section: 8rem;

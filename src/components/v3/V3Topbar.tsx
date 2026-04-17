@@ -7,7 +7,7 @@ import { contato } from "@/lib/data";
 
 const links = [
   { label: "Essência", href: "#v3-manifesto" },
-  { label: "Masterplan", href: "#v3-masterplan" },
+  { label: "Masterplan", href: "#v3-implantacao" },
   { label: "Mosaico", href: "#v3-mosaic" },
   { label: "Localização", href: "#v3-map" },
   { label: "Contato", href: "#v3-form" },

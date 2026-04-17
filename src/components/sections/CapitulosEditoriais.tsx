@@ -7,7 +7,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function CapitulosEditoriais() {
   return (
-    <section id="capitulosDestaque" className="bg-off-white">
+    <section id="empreendimento" className="bg-off-white">
       {/* Header introdutório */}
       <div className="bg-sage paper-grain">
         <div className="mx-auto max-w-[1200px] px-6 py-24 text-center md:px-12 md:py-36">

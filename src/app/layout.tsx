@@ -1,17 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Inter, Italianno, Fraunces } from "next/font/google";
+import localFont from "next/font/local";
+import { Italianno } from "next/font/google";
 import "./globals.css";
 
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-cormorant",
+const aldine = localFont({
+  src: "../../public/fonts/Aldine721BT-Light.otf",
+  variable: "--font-aldine",
   display: "swap",
 });
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
+const antenna = localFont({
+  src: [
+    { path: "../../public/fonts/Antenna-Light.otf", weight: "300" },
+    { path: "../../public/fonts/Antenna-Regular.otf", weight: "400" },
+    { path: "../../public/fonts/Antenna-Medium.otf", weight: "500" },
+  ],
+  variable: "--font-antenna",
   display: "swap",
 });
 
@@ -19,12 +23,6 @@ const italianno = Italianno({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-italianno",
-  display: "swap",
-});
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
   display: "swap",
 });
 
@@ -87,7 +85,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${cormorant.variable} ${inter.variable} ${italianno.variable} ${fraunces.variable} antialiased`}
+      className={`${aldine.variable} ${antenna.variable} ${italianno.variable} antialiased`}
     >
       <body className="min-h-full">
         {children}

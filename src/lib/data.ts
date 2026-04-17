@@ -245,15 +245,15 @@ export type Hotspot = {
 };
 
 export const hotspots: Hotspot[] = [
-  { id: "portaria", numero: "01", titulo: "Portaria", descricao: "Ponto de chegada com segurança 24h e administração.", x: 18, y: 78 },
-  { id: "clube", numero: "02", titulo: "Clube", descricao: "Espaços integrados de lazer, eventos e convivência.", x: 32, y: 58 },
-  { id: "verde", numero: "03", titulo: "Área verde preservada", descricao: "80.376 m² de preservação ambiental.", x: 70, y: 32 },
-  { id: "jardim", numero: "04", titulo: "Praça Jardim dos Sentidos", descricao: "Lazer reinterpretado como praça europeia.", x: 45, y: 50 },
-  { id: "esportes", numero: "05", titulo: "Complexo esportivo", descricao: "Tênis, beach tennis, poliesportiva e mais.", x: 52, y: 68 },
-  { id: "playground", numero: "06", titulo: "Playground", descricao: "Área infantil ao ar livre.", x: 38, y: 72 },
-  { id: "pet", numero: "07", titulo: "Pet place", descricao: "Território próprio para os pets da família.", x: 60, y: 75 },
-  { id: "comerciais", numero: "08", titulo: "Lotes comerciais", descricao: "44 unidades integradas ao residencial.", x: 78, y: 82 },
-  { id: "heliponto", numero: "09", titulo: "Heliponto", descricao: "Exclusividade e autonomia nos deslocamentos.", x: 82, y: 18 },
+  { id: "comerciais", numero: "01", titulo: "Lotes Comerciais", descricao: "44 unidades com dimensão padrão de 12 × 25 m, integradas ao residencial.", x: 37, y: 85 },
+  { id: "heliponto", numero: "02", titulo: "Heliponto", descricao: "Exclusividade e autonomia nos deslocamentos.", x: 62, y: 80 },
+  { id: "portaria", numero: "03", titulo: "Portaria e Administração", descricao: "Ponto de chegada com segurança 24h e administração.", x: 62, y: 70 },
+  { id: "clube", numero: "04", titulo: "Clube", descricao: "Espaços integrados de lazer, eventos e convivência.", x: 67, y: 70 },
+  { id: "verde", numero: "05", titulo: "Área Verde Preservada", descricao: "80.376,85 m² de preservação ambiental.", x: 82, y: 46 },
+  { id: "jardim", numero: "06", titulo: "Praça Jardim dos Sentidos", descricao: "Lazer reinterpretado como praça europeia.", x: 36, y: 38 },
+  { id: "esportes", numero: "07", titulo: "Complexo Esportivo", descricao: "Tênis, beach tennis, poliesportiva e mais.", x: 25, y: 55 },
+  { id: "playground", numero: "08", titulo: "Playground", descricao: "Área infantil ao ar livre.", x: 31, y: 20 },
+  { id: "pet", numero: "09", titulo: "Pet Place", descricao: "Território próprio para os pets da família.", x: 35, y: 12 },
 ];
 
 export const faq = [

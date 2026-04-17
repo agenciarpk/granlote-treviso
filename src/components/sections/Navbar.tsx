@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 import { contato } from "@/lib/data";
 
 const links = [
-  { label: "Empreendimento", href: "#manifesto" },
-  { label: "Masterplan", href: "#masterplan" },
-  { label: "Galeria", href: "#galeria" },
+  { label: "Empreendimento", href: "#empreendimento" },
+  { label: "Masterplan", href: "#implantacao" },
+  { label: "Galeria", href: "#galerias" },
   { label: "Localização", href: "#localizacao" },
   { label: "Granlote", href: "#granlote" },
   { label: "Contato", href: "#contato" },
