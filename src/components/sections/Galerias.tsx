@@ -37,7 +37,6 @@ const galeria2: GaleriaItem[] = [
 
 const galeria3: GaleriaItem[] = [
   { src: "/images/masterplan-1920.webp", titulo: "Masterplan", label: "Visão geral" },
-  { src: "/images/drone-aereo-1920.webp", titulo: "Vista aérea", label: "Implantação no território" },
   { src: "/images/fotomontagem-1920.webp", titulo: "Fotomontagem", label: "Empreendimento finalizado" },
 ];
 
@@ -103,57 +102,55 @@ export function Galerias() {
 
         {/* Tabs */}
         <Reveal delay={0.1}>
-          <div className="mt-12 flex flex-wrap gap-2 border-b border-earth-deep/10 pb-0">
+          <div className="mt-12 flex flex-wrap gap-3">
             {abas.map((aba, i) => (
               <button
                 key={aba.id}
                 type="button"
                 onClick={() => setAbaAtiva(i)}
-                className={`relative pb-4 text-[12px] tracking-[0.14em] uppercase transition-colors ${
-                  abaAtiva === i ? "text-earth-deep" : "text-earth/50 hover:text-earth"
+                className={`rounded-full border px-6 py-3 text-[13px] tracking-[0.1em] uppercase transition-all ${
+                  abaAtiva === i
+                    ? "border-ocre bg-ocre text-off-white"
+                    : "border-earth-deep/20 bg-transparent text-earth hover:border-ocre hover:text-ocre"
                 }`}
               >
                 {aba.label}
-                {abaAtiva === i && (
-                  <motion.span
-                    layoutId="tab-underline"
-                    className="absolute inset-x-0 bottom-0 h-px bg-ocre"
-                  />
-                )}
               </button>
             ))}
           </div>
         </Reveal>
 
-        {/* Grid */}
+        {/* Scroll horizontal — mobile e desktop */}
         <AnimatePresence mode="wait">
           <motion.div
             key={abaAtiva}
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -8 }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="mt-8"
           >
-            {abas[abaAtiva].itens.map((item, i) => {
-              const wide = i === 0;
-              return (
+            <div
+              className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4 md:gap-4"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              {abas[abaAtiva].itens.map((item, i) => (
                 <button
                   key={item.src}
                   type="button"
                   onClick={() => abrirLightbox(abaAtiva, i)}
-                  className={`group relative block overflow-hidden rounded-sm bg-sage ${wide ? "md:col-span-2 lg:col-span-2" : ""}`}
-                  style={{ aspectRatio: "16/9" }}
+                  className="group relative block w-[75vw] flex-shrink-0 snap-center overflow-hidden rounded-sm bg-sage md:w-[40vw] lg:w-[30vw]"
+                  style={{ aspectRatio: "16/10" }}
                 >
                   <Image
                     src={item.src}
                     alt={item.titulo}
                     fill
-                    sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    sizes="(max-width: 768px) 75vw, (max-width: 1024px) 40vw, 30vw"
                     className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-[1.04]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-earth-deep/80 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                  <div className="absolute bottom-3 left-3 right-3 opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+                  <div className="absolute inset-0 bg-gradient-to-t from-earth-deep/70 via-transparent to-transparent md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100" />
+                  <div className="absolute bottom-3 left-3 right-3 md:opacity-0 md:transition-opacity md:duration-500 md:group-hover:opacity-100">
                     <span className="block font-serif text-[10px] uppercase tracking-[0.15em] text-ocre-light">
                       {item.label}
                     </span>
@@ -162,8 +159,8 @@ export function Galerias() {
                     </span>
                   </div>
                 </button>
-              );
-            })}
+              ))}
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>

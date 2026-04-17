@@ -1,10 +1,9 @@
-import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
 
-const fotos = [
-  { src: "/images/foto-real-1-1920.webp", label: "Vista geral do canteiro" },
-  { src: "/images/foto-real-2-1920.webp", label: "Infraestrutura em andamento" },
-  { src: "/images/foto-real-3-1920.webp", label: "Obras de urbanização" },
+const placeholders = [
+  { label: "Vista geral do canteiro", cor: "bg-earth" },
+  { label: "Infraestrutura em andamento", cor: "bg-ocre" },
+  { label: "Obras de urbanização", cor: "bg-earth-deep" },
 ];
 
 export function ObrasFotos() {
@@ -24,24 +23,33 @@ export function ObrasFotos() {
         </Reveal>
 
         <Reveal delay={0.1} className="mt-16">
-          <div className="grid gap-3 md:grid-cols-3">
-            {fotos.map((foto, i) => (
-              <div key={foto.src} className="group relative overflow-hidden rounded-sm bg-earth-deep/10">
-                <div className="relative aspect-[4/3] w-full">
-                  <Image
-                    src={foto.src}
-                    alt={foto.label}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-[1.4s] ease-out group-hover:scale-[1.03]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-earth-deep/70 to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <span className="font-serif text-[10px] uppercase tracking-[0.15em] text-ocre-light">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                    <p className="mt-1 text-[13px] font-light text-off-white">{foto.label}</p>
-                  </div>
+          {/* Mobile — scroll horizontal */}
+          <div
+            className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4 md:hidden"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            {placeholders.map((item, i) => (
+              <div key={item.label} className={`${item.cor} relative w-[75vw] flex-shrink-0 snap-center overflow-hidden rounded-sm`}>
+                <div className="aspect-[4/3] w-full" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="font-serif text-[10px] uppercase tracking-[0.15em] text-ocre-light">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="mt-1 text-[13px] font-light text-off-white">{item.label}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          {/* Desktop — grid */}
+          <div className="hidden gap-3 md:grid md:grid-cols-3">
+            {placeholders.map((item, i) => (
+              <div key={item.label} className={`${item.cor} relative overflow-hidden rounded-sm`}>
+                <div className="aspect-[4/3] w-full" />
+                <div className="absolute bottom-4 left-4 right-4">
+                  <span className="font-serif text-[10px] uppercase tracking-[0.15em] text-ocre-light">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="mt-1 text-[13px] font-light text-off-white">{item.label}</p>
                 </div>
               </div>
             ))}
@@ -50,7 +58,7 @@ export function ObrasFotos() {
 
         <Reveal delay={0.2} className="mt-12">
           <p className="text-[11px] italic text-earth/50">
-            Fotos reais do canteiro de obras. Material atualizado em Março/2026.
+            Fotos reais do canteiro de obras em breve. Material atualizado em Março/2026.
           </p>
         </Reveal>
       </div>

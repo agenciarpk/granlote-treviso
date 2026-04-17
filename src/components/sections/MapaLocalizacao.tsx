@@ -3,7 +3,7 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function MapaLocalizacao() {
   return (
-    <section className="relative bg-off-white py-24 md:py-36">
+    <section className="relative hidden bg-off-white py-24 md:block md:py-36">
       <div className="mx-auto max-w-[1440px] px-6 md:px-12">
         <div className="grid gap-12 md:grid-cols-12 lg:gap-16">
           <Reveal className="md:col-span-4">
@@ -43,7 +43,7 @@ export function MapaLocalizacao() {
                   src="/images/mapa-localizacao-1920.webp"
                   alt="Mapa de localização do Gran Reserva Treviso"
                   fill
-                  sizes="(max-width: 768px) 100vw, 900px"
+                  sizes="900px"
                   className="object-contain"
                 />
               </div>

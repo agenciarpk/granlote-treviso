@@ -7,41 +7,44 @@ export function Footer() {
       <div className="mx-auto max-w-[1440px] px-6 py-20 md:px-12 md:py-24">
 
         {/* Assinaturas das empresas */}
-        <div className="mb-16 grid grid-cols-1 gap-10 border-b border-off-white/10 pb-16 sm:grid-cols-3 sm:items-center sm:gap-0">
+        <div className="mb-16 flex items-center justify-center gap-6 border-b border-off-white/10 pb-16 md:gap-10">
           {/* Gestão de vendas — Benedo */}
-          <div className="sm:border-r sm:border-off-white/10 sm:pr-12">
-            <p className="text-[9px] uppercase tracking-[0.22em] text-off-white/40">Gestão de vendas</p>
+          <div className="text-center">
+            <p className="hidden text-[9px] uppercase tracking-[0.22em] text-off-white/40 sm:block">Gestão de vendas</p>
             <Image
               src="/logo/benedo.svg"
               alt="Benedo"
               width={160}
               height={60}
-              className="mt-3 h-10 w-auto brightness-0 invert opacity-80"
+              className="mt-2 h-9 w-auto brightness-0 invert opacity-80"
             />
-            <p className="mt-2 text-[10px] uppercase tracking-[0.1em] text-off-white/35">{legal.creci}</p>
+            <p className="mt-1 hidden text-[10px] uppercase tracking-[0.1em] text-off-white/35 sm:block">{legal.creci}</p>
           </div>
 
+          <span className="h-10 w-px bg-off-white/10" />
+
           {/* Castelfranco — centro */}
-          <div className="flex flex-col items-start sm:items-center sm:border-r sm:border-off-white/10 sm:px-12">
+          <div className="text-center">
             <Image
               src="/logo/castelfranco.svg"
               alt="Castelfranco"
               width={180}
               height={90}
-              className="h-12 w-auto brightness-0 invert opacity-80"
+              className="h-14 w-auto brightness-0 invert opacity-80"
             />
-            <p className="mt-2 text-[11px] font-light text-off-white/50 sm:text-center">Empreendimentos imobiliários</p>
           </div>
 
+          <span className="h-10 w-px bg-off-white/10" />
+
           {/* Realização — Granlote */}
-          <div className="sm:pl-12">
-            <p className="text-[9px] uppercase tracking-[0.22em] text-off-white/40">Realização</p>
+          <div className="text-center">
+            <p className="hidden text-[9px] uppercase tracking-[0.22em] text-off-white/40 sm:block">Realização</p>
             <Image
               src="/logo/granlote-branco.png"
               alt="Granlote Urbanismo"
               width={160}
               height={48}
-              className="mt-3 h-9 w-auto opacity-80"
+              className="mt-2 h-9 w-auto opacity-80"
             />
           </div>
         </div>
@@ -74,11 +77,10 @@ export function Footer() {
             <ul className="mt-4 space-y-3 text-sm font-light">
               {[
                 ["#numeros", "O produto"],
-                ["#capitulosDestaque", "Lazer"],
+                ["#empreendimento", "Lazer"],
                 ["#implantacao", "Implantação"],
                 ["#localizacao", "Localização"],
                 ["#obras", "Obras"],
-                ["#plantao", "Plantão de vendas"],
                 ["#contato", "Contato"],
               ].map(([href, label]) => (
                 <li key={href}>

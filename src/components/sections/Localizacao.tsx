@@ -23,8 +23,8 @@ export function Localizacao() {
       {/* Hero da localização — imagem aérea full-width */}
       <div className="relative aspect-[21/9] w-full overflow-hidden">
         <Image
-          src="/images/drone-aereo-1920.webp"
-          alt="Vista aérea de Paulínia"
+          src="/images/fotomontagem-1920.webp"
+          alt="Fotomontagem aérea do Gran Reserva Treviso"
           fill
           sizes="100vw"
           className="object-cover"

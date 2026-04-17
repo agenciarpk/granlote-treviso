@@ -54,44 +54,39 @@ export function Hero() {
             alt="Gran Reserva Treviso"
             width={320}
             height={128}
-            className="h-24 w-auto brightness-0 invert opacity-95 md:h-32 lg:h-36"
+            className="h-44 w-auto brightness-0 invert opacity-95 md:h-32 lg:h-36"
             priority
           />
         </motion.div>
 
         {/* Texto — base da hero */}
         <div>
-          <motion.p
+          <motion.div
             initial={reduce ? undefined : { opacity: 0, y: 16 }}
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="tagline-editorial mb-6 text-ocre-light"
+            className="mb-6"
           >
-            Exclusivo em todos os detalhes · Pré-lançamento · Paulínia/SP
-          </motion.p>
+            <span className="tagline-editorial inline-block text-off-white md:rounded-full md:bg-off-white/90 md:px-4 md:py-2 md:text-earth-deep md:backdrop-blur-sm">
+              Exclusivo em todos os detalhes · Pré-lançamento · Paulínia/SP
+            </span>
+          </motion.div>
 
           <motion.h1
             initial={reduce ? undefined : { opacity: 0, y: 48 }}
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="font-display leading-[0.92] text-off-white"
-            style={{ fontSize: "clamp(2.8rem, 7.5vw, 9rem)" }}
+            style={{ fontSize: "clamp(2.6rem, 5.5vw, 7rem)" }}
           >
             Residencial fechado
             <br />
-            de alto padrão
+            de alto padrão,
+            <br />
+            terrenos de <span style={{ fontVariantNumeric: "lining-nums" }}>300</span> m²
             <br />
             <span className="italic">com <span style={{ fontVariantNumeric: "lining-nums" }}>12</span>m de frente</span>
           </motion.h1>
-
-          <motion.p
-            initial={reduce ? undefined : { opacity: 0, y: 20 }}
-            animate={reduce ? undefined : { opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
-            className="mt-8 text-[15px] font-light text-off-white/65 md:text-base"
-          >
-            Terrenos a partir de 300 m² · 525 lotes residenciais · 44 lotes comerciais · Heliponto exclusivo
-          </motion.p>
 
           <motion.div
             initial={reduce ? undefined : { opacity: 0, y: 20 }}
@@ -103,10 +98,7 @@ export function Hero() {
               href="#contato"
               className="group inline-flex items-center justify-center rounded-full bg-ocre px-8 py-4 text-[12px] tracking-[0.15em] uppercase text-off-white transition-all hover:bg-ocre-light"
             >
-              Receber informações do lançamento
-              <svg viewBox="0 0 24 24" fill="none" className="ml-3 h-4 w-4 transition-transform group-hover:translate-x-1">
-                <path d="M5 12h14m0 0l-6-6m6 6l-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
+              Quero saber mais
             </a>
             <a
               href="#plantao"
@@ -128,16 +120,6 @@ export function Hero() {
         <span className="h-8 w-px bg-off-white/50" />
       </motion.div>
 
-      {/* Realização */}
-      <motion.div
-        initial={reduce ? undefined : { opacity: 0 }}
-        animate={reduce ? undefined : { opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-6 right-6 hidden items-center gap-3 md:flex md:bottom-8 md:right-10"
-      >
-        <span className="tagline-editorial text-[10px] text-off-white/45">realização</span>
-        <Image src="/logo/granlote-branco.png" alt="Granlote Urbanismo" width={110} height={34} className="h-7 w-auto opacity-75" />
-      </motion.div>
     </section>
   );
 }

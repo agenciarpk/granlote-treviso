@@ -7,11 +7,11 @@ import { contato } from "@/lib/data";
 
 const links = [
   { label: "Empreendimento", href: "#empreendimento" },
-  { label: "Masterplan", href: "#implantacao" },
   { label: "Galeria", href: "#galerias" },
+  { label: "Masterplan", href: "#implantacao" },
   { label: "Localização", href: "#localizacao" },
-  { label: "Granlote", href: "#granlote" },
   { label: "Contato", href: "#contato" },
+  { label: "Granlote", href: "#granlote" },
 ];
 
 export function Navbar() {
@@ -61,13 +61,6 @@ export function Navbar() {
               </a>
             ))}
           </nav>
-
-          {/* Version switcher */}
-          <div className="hidden items-center gap-2 text-[10px] uppercase tracking-[0.15em] lg:flex">
-            <span className={cn("font-serif", scrolled ? "text-ocre" : "text-ocre-light")}>v1</span>
-            <a href="/v3" className={cn("transition", scrolled ? "text-earth/50 hover:text-earth" : "text-off-white/40 hover:text-off-white/80")}>v3</a>
-            <span className={cn("mx-2 h-4 w-px", scrolled ? "bg-earth/15" : "bg-off-white/20")} />
-          </div>
 
           {/* CTA desktop */}
           <a

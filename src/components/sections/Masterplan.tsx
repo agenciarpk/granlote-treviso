@@ -82,7 +82,7 @@ export function Masterplan() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-end justify-center bg-earth-deep/80 backdrop-blur-sm md:items-center"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-earth-deep/80 backdrop-blur-sm px-6"
             onClick={() => setActive(null)}
           >
             <motion.div
@@ -90,7 +90,7 @@ export function Masterplan() {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 40, opacity: 0 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-full max-w-lg overflow-hidden rounded-t-2xl bg-off-white p-8 md:rounded-2xl md:p-10"
+              className="relative w-full max-w-lg overflow-hidden rounded-2xl bg-off-white p-8 md:p-10"
               onClick={(e) => e.stopPropagation()}
             >
               <span className="font-serif text-ocre text-sm">{active.numero}</span>

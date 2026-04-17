@@ -1,5 +1,6 @@
 import { SmoothScroll } from "@/components/ui/SmoothScroll";
 import { WhatsAppFab } from "@/components/ui/WhatsAppFab";
+import { BackToTop } from "@/components/ui/BackToTop";
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
 import { CapitulosEditoriais } from "@/components/sections/CapitulosEditoriais";
@@ -10,7 +11,6 @@ import { Masterplan } from "@/components/sections/Masterplan";
 import { Localizacao } from "@/components/sections/Localizacao";
 import { MapaLocalizacao } from "@/components/sections/MapaLocalizacao";
 import { ObrasFotos } from "@/components/sections/ObrasFotos";
-import { PlantaoVendas } from "@/components/sections/PlantaoVendas";
 import { FormContato } from "@/components/sections/FormContato";
 import { Footer } from "@/components/sections/Footer";
 
@@ -27,9 +27,8 @@ export default function Home() {
         <CapitulosEditoriais />
         <Galerias />
 
-        {/* 3. Diferenciais */}
+        {/* 3. Dados do empreendimento */}
         <Numeros />
-        <Granlote />
 
         {/* 4. Implantação */}
         <Masterplan />
@@ -41,14 +40,15 @@ export default function Home() {
         {/* 6. Evolução de obras */}
         <ObrasFotos />
 
-        {/* 7. Fale conosco — Plantão */}
-        <PlantaoVendas />
-
-        {/* 8. Formulário */}
+        {/* 7. Formulário */}
         <FormContato />
+
+        {/* 8. Quem somos */}
+        <Granlote />
       </main>
       <Footer />
       <WhatsAppFab />
+      <BackToTop />
     </>
   );
 }
