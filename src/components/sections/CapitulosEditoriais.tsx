@@ -85,9 +85,7 @@ export function CapitulosEditoriais() {
                   className="object-cover transition-transform duration-[1.8s] ease-out hover:scale-[1.03]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-earth-deep/60 via-transparent to-transparent" />
-                <span className="absolute top-4 left-4 bg-off-white/90 backdrop-blur-sm px-3 py-1 rounded-full font-serif text-[10px] uppercase tracking-[0.15em] text-ocre">
-                  {String(i + 1).padStart(2, "0")} / {String(capitulosDestaque.length).padStart(2, "0")}
-                </span>
+{/* numerador removido */}
               </div>
               <div className="mt-5 md:mt-8 md:max-w-lg">
                 <p className="tagline-editorial text-ocre">{cap.chapeu}</p>

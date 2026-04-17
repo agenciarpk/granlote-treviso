@@ -19,7 +19,7 @@ export function Hero() {
           sizes="100vw"
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-earth-deep/60 via-earth-deep/20 to-earth-deep/92" />
+        <div className="absolute inset-0 bg-gradient-to-b from-earth-deep/80 via-earth-deep/50 to-earth-deep/95 md:from-earth-deep/60 md:via-earth-deep/20 md:to-earth-deep/92" />
       </div>
 
       {/* Wave pattern */}
@@ -61,17 +61,6 @@ export function Hero() {
 
         {/* Texto — base da hero */}
         <div>
-          <motion.div
-            initial={reduce ? undefined : { opacity: 0, y: 16 }}
-            animate={reduce ? undefined : { opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="mb-6"
-          >
-            <span className="tagline-editorial inline-block text-off-white md:rounded-full md:bg-off-white/90 md:px-4 md:py-2 md:text-earth-deep md:backdrop-blur-sm">
-              Exclusivo em todos os detalhes · Pré-lançamento · Paulínia/SP
-            </span>
-          </motion.div>
-
           <motion.h1
             initial={reduce ? undefined : { opacity: 0, y: 48 }}
             animate={reduce ? undefined : { opacity: 1, y: 0 }}
