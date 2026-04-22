@@ -86,7 +86,7 @@ export function Navbar() {
               "flex h-11 w-11 items-center justify-center rounded-full border transition lg:hidden",
               scrolled
                 ? "border-earth/20 text-earth-deep"
-                : "border-off-white/30 text-off-white"
+                : "border-off-white/30 bg-white text-earth-deep"
             )}
           >
             <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
