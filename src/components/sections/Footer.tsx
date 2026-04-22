@@ -63,42 +63,14 @@ export function Footer() {
         </div>
 
         {/* Assinaturas das empresas */}
-        <div className="mt-12 flex items-center justify-center gap-6 border-t border-off-white/10 pt-12 px-4 md:gap-10 md:px-0">
-          {/* Gestão de vendas — Benedo */}
-          <div className="text-center">
-            <p className="text-[9px] uppercase tracking-[0.22em] text-off-white/40">Gestão de vendas</p>
-            <Image
-              src="/logo/benedo.svg"
-              alt="Benedo"
-              width={160}
-              height={60}
-              className="mt-2 h-8 w-auto brightness-0 invert opacity-80 md:h-[50px]"
-            />
-            <p className="mt-1 text-[10px] uppercase tracking-[0.1em] text-off-white/35">{legal.creci}</p>
-          </div>
-
-          <span className="h-14 w-px bg-off-white/10" />
-
-          {/* Realização — Castelfranco + Granlote */}
-          <div className="text-center">
-            <p className="text-[9px] uppercase tracking-[0.22em] text-off-white/40">Realização</p>
-            <div className="mt-2 flex items-center justify-center gap-4 md:gap-6">
-              <Image
-                src="/logo/castelfranco.svg"
-                alt="Castelfranco Empreendimentos"
-                width={140}
-                height={70}
-                className="h-[40px] w-auto brightness-0 invert opacity-80 md:h-[62px]"
-              />
-              <Image
-                src="/logo/granlote-branco.png"
-                alt="Granlote Urbanismo"
-                width={160}
-                height={48}
-                className="h-8 w-auto object-contain opacity-80 md:h-11"
-              />
-            </div>
-          </div>
+        <div className="mt-12 flex items-center justify-center border-t border-off-white/10 pt-12 px-4 md:px-0">
+          <Image
+            src="/logo/footer-logos.svg"
+            alt="Benedo — Gestão de vendas | Castelfranco Empreendimentos | Granlote Urbanismo — Realização"
+            width={377}
+            height={60}
+            className="h-10 w-auto opacity-90 md:h-14"
+          />
         </div>
 
         <div className="mt-8 text-center text-[11px] font-light leading-relaxed text-off-white/45">
