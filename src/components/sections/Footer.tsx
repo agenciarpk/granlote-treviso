@@ -63,13 +63,25 @@ export function Footer() {
         </div>
 
         {/* Assinaturas das empresas */}
-        <div className="mt-12 flex items-center justify-center border-t border-off-white/10 pt-12 px-4 md:px-0">
+        <div className="mt-12 flex flex-col items-center border-t border-off-white/10 pt-12 px-4 md:px-0">
+          {/* Textos acima dos logos */}
+          <div className="relative w-full max-w-[490px] mb-3">
+            <span className="absolute left-[2%] bottom-0 text-[7px] uppercase tracking-[0.15em] text-off-white/50 md:text-[11px] md:tracking-[0.2em]">
+              Gestão de vendas
+            </span>
+            <span className="absolute right-[18%] mr-5 bottom-0 text-[7px] uppercase tracking-[0.15em] text-off-white/50 md:text-[11px] md:tracking-[0.2em]">
+              Realização
+            </span>
+            {/* Spacer for height */}
+            <span className="invisible text-[7px] md:text-[11px]">&nbsp;</span>
+          </div>
+          {/* Logos SVG único com proporções corretas */}
           <Image
             src="/logo/footer-logos.svg"
             alt="Benedo — Gestão de vendas | Castelfranco Empreendimentos | Granlote Urbanismo — Realização"
-            width={377}
-            height={60}
-            className="h-10 w-auto opacity-90 md:h-14"
+            width={490}
+            height={78}
+            className="h-[52px] w-auto opacity-90 md:h-[73px]"
           />
         </div>
 
