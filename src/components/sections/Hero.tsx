@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
+import { contato } from "@/lib/data";
 
 export function Hero() {
   const reduce = useReducedMotion();
@@ -75,7 +76,9 @@ export function Hero() {
               Quero saber mais
             </a>
             <a
-              href="#plantao"
+              href={`https://wa.me/${contato.whatsappNumero}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-full border border-off-white/30 bg-off-white/5 px-8 py-4 text-[12px] tracking-[0.15em] uppercase text-off-white backdrop-blur-md transition-all hover:bg-off-white/15"
             >
               Agendar visita ao plantão
@@ -168,7 +171,9 @@ export function Hero() {
                 Quero saber mais
               </a>
               <a
-                href="#plantao"
+                href={`https://wa.me/${contato.whatsappNumero}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center rounded-full border border-off-white/30 bg-off-white/5 px-8 py-4 text-[12px] tracking-[0.15em] uppercase text-off-white backdrop-blur-md transition-all hover:bg-off-white/15"
               >
                 Agendar visita ao plantão

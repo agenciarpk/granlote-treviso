@@ -62,21 +62,6 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* CTA desktop */}
-          <a
-            href={`https://wa.me/${contato.whatsappNumero}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(
-              "hidden rounded-full border px-5 py-2.5 text-[12px] tracking-[0.12em] uppercase transition-all lg:inline-flex",
-              scrolled
-                ? "border-ocre bg-ocre text-off-white hover:bg-ocre-deep"
-                : "border-off-white/40 bg-off-white/10 text-off-white backdrop-blur-md hover:bg-off-white hover:text-earth-deep"
-            )}
-          >
-            Falar agora
-          </a>
-
           {/* Mobile hamburger */}
           <button
             type="button"

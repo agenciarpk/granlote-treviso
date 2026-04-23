@@ -32,7 +32,7 @@ export function Localizacao() {
         <div className="absolute inset-0 bg-gradient-to-b from-earth-deep/30 via-transparent to-earth-deep/95" />
         <div className="absolute inset-x-0 bottom-0 mx-auto max-w-[1440px] px-6 pb-12 md:px-12 md:pb-16">
           <Reveal>
-            <p className="tagline-editorial text-ocre-light">o entorno que faz a diferença</p>
+            <p className="tagline-editorial text-off-white">o entorno que faz a diferença</p>
             <h2 className="mt-4 font-display text-5xl font-light leading-[1.05] md:text-7xl">
               Morar bem localizado
               <span className="block italic text-off-white/75">é investir com inteligência</span>

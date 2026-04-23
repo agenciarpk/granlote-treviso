@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "@/components/ui/Reveal";
+import { contato } from "@/lib/data";
 
 export function PlantaoVendas() {
   return (
@@ -82,7 +83,9 @@ export function PlantaoVendas() {
 
           <div className="mt-12 flex flex-col gap-3 sm:flex-row sm:gap-4">
             <a
-              href="#contato"
+              href={`https://wa.me/${contato.whatsappNumero}`}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group inline-flex items-center justify-center rounded-full bg-ocre px-8 py-4 text-[12px] tracking-[0.15em] uppercase text-off-white transition hover:bg-ocre-light"
             >
               Agendar visita

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Reveal } from "@/components/ui/Reveal";
@@ -50,6 +50,27 @@ export function Galerias() {
   const [abaAtiva, setAbaAtiva] = useState(0);
   const [lightbox, setLightbox] = useState<{ abaIdx: number; itemIdx: number } | null>(null);
   const [direction, setDirection] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    setCanScrollLeft(el.scrollLeft > 1);
+    setCanScrollRight(el.scrollLeft < el.scrollWidth - el.clientWidth - 1);
+  }, []);
+
+  useEffect(() => {
+    checkScroll();
+  }, [abaAtiva, checkScroll]);
+
+  const scrollBy = (dir: number) => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const cardWidth = el.querySelector("button")?.offsetWidth ?? el.clientWidth * 0.75;
+    el.scrollBy({ left: dir * (cardWidth + 16), behavior: "smooth" });
+  };
 
   const itensAtivos = lightbox !== null ? abas[lightbox.abaIdx].itens : abas[abaAtiva].itens;
 
@@ -128,9 +149,37 @@ export function Galerias() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="mt-8"
+            className="relative mt-8"
           >
+            {/* Seta esquerda */}
+            {canScrollLeft && (
+              <button
+                type="button"
+                onClick={() => scrollBy(-1)}
+                aria-label="Anterior"
+                className="absolute left-2 top-1/2 z-10 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-earth-deep/20 bg-off-white/90 text-earth-deep shadow-md backdrop-blur transition hover:bg-ocre hover:text-off-white hover:border-ocre md:left-4 md:h-12 md:w-12"
+              >
+                <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
+                  <path d="M15 6l-6 6 6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            )}
+            {/* Seta direita */}
+            {canScrollRight && (
+              <button
+                type="button"
+                onClick={() => scrollBy(1)}
+                aria-label="Próxima"
+                className="absolute right-2 top-1/2 z-10 -translate-y-1/2 flex h-11 w-11 items-center justify-center rounded-full border border-earth-deep/20 bg-off-white/90 text-earth-deep shadow-md backdrop-blur transition hover:bg-ocre hover:text-off-white hover:border-ocre md:right-4 md:h-12 md:w-12"
+              >
+                <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5">
+                  <path d="M9 6l6 6-6 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            )}
             <div
+              ref={scrollRef}
+              onScroll={checkScroll}
               className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4 md:gap-4"
               style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             >
