@@ -99,9 +99,11 @@ export function Galerias() {
     };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
+    document.documentElement.style.overflow = "hidden";
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [lightbox, close, prev, next]);
 
